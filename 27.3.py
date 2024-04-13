@@ -14,3 +14,10 @@ async def square_if_even(number):
 async def check_even(number):
     await asyncio.sleep(1)  # Simulating some asynchronous operation
     return number % 2 == 0  # Return True if the number is even, False otherwise
+
+
+# Define the main asynchronous function to test the above functions
+async def test_functions():
+    # Define a list of numbers to test
+    numbers = [12, 17, 88, 15, 4, 18, 47, 55, 24, 42]
+    tasks = []
