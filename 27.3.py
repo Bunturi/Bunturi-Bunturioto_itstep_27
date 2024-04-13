@@ -21,3 +21,11 @@ async def test_functions():
     # Define a list of numbers to test
     numbers = [12, 17, 88, 15, 4, 18, 47, 55, 24, 42]
     tasks = []
+
+    # Create a list of tasks by appending tasks for each number
+    for number in numbers:
+        tasks.append(square_if_even(number))
+        tasks.append(check_even(number))
+
+    # Execute all tasks concurrently and collect their results
+    results = await asyncio.gather(*tasks)
