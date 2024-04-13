@@ -29,3 +29,13 @@ async def test_functions():
 
     # Execute all tasks concurrently and collect their results
     results = await asyncio.gather(*tasks)
+
+    # Print squared numbers for even numbers
+    print("Squared numbers for even numbers:")
+    for idx, result in enumerate(results):
+        if idx % 2 == 0 and result is not None:
+            print(f"{numbers[idx // 2]}: {result}")  # Print the number and its square
+
+
+# Run the main asynchronous function
+asyncio.run(test_functions())
