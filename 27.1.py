@@ -26,4 +26,7 @@ async def main():
     elapsed_time = end_time - start_time  # Calculate the elapsed time
     print(f"Elapsed Time: {elapsed_time:.2f} Seconds")
 
+# Check if the script is being run directly
+if __name__ == '__main__':
+    asyncio.run(main())  # Run the main asynchronous function
 
